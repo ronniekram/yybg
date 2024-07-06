@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import supplicant from "@assets/graphics/gifs/supplicant-beg.gif";
+---
+
+<section class="bg-grey-900">
+  <div class="wrapper right-img-col xs:place-items-center">
+    <div
+      class="space-y-1 text-center xs:text-left xs:h-full xs:flex xs:flex-col xs:justify-center lg:space-y-2"
+    >
+      <h2 class="heading">Immortality with Risks, <br /> PvP with Stakes</h2>
+      <p class="text-sm md:text-base lg:text-xl 2xl:text-2xl leading-[1.5]">
+        The prevailing side, in a given rite, will be allowed to take a single item from the losing
+        homunculus. A lost item is replaced with an old, worn out, grey piece of equipment provided
+        by the Lord Alchemist's Flavor Rites Association (LAFRA) at no cost to the participating
+        fermentationist.*
+      </p>
+    </div>
+    <div class="space-y-5 xs:space-y-3 md:space-y-4">
+      <Image
+        src={supplicant}
+        alt="Animation of a supplicant begging"
+        loading="lazy"
+        quality={100}
+        width={648}
+        class="w-full"
+      />
+      <p class="text-grey-200 text-xs md:text-sm 2xl:text-base">
+        * Make sure not to lose your entire suit, though -- or risk compulsory longjuicing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .heading {
+    @apply font-bold text-blue-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+</style>
