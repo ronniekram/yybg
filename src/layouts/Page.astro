@@ -1,0 +1,47 @@
+---
+import { SEO } from "astro-seo";
+
+import Nav from "@components/layout/Nav.astro";
+import Footer from "@components/layout/Footer.astro";
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <SEO
+      {title}
+      {description}
+      openGraph={{
+        basic: {
+          title,
+          type: `site`,
+          image: `/opengraph.png`,
+        },
+      }}
+      extend={{
+        link: [{ rel: `icon`, href: `/favicon.ico` }],
+        meta: [
+          {
+            name: `twitter:image`,
+            content: `/opengraph.png`,
+          },
+          { name: `twitter:title`, content: title },
+          { name: `twitter:description`, content: description },
+        ],
+      }}
+    />
+    <style is:global>
+      @import "@assets/styles/base.css";
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

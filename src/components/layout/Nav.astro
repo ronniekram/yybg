@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import logo from "@assets/graphics/logos/nav.png";
+---
+
+<header class="bg-grey-950 py-4 xs:py-5 border-b-2 border-blue-300">
+  <nav class="flex items-center justify-between wrapper">
+    <a class="w-[8.85625rem] h-11" href="/" aria-label="Home">
+      <Image src={logo} alt="Yum Yum Bloodgun" loading="eager" quality={100} />
+    </a>
+
+    <ul
+      class="hidden xs:flex items-center space-x-6 md:space-x-8 2xl:space-x-10 font-medium text-2xl xl:text-3xl"
+    >
+      <a href="/press" class="link">Press Kit</a>
+      <a href="#footer" class="link">Contact</a>
+      <a href="" target="_blank" rel="noreferrer" class="link flex items-center space-x-2">
+        <span>Steam</span>
+        <Icon name="external" size={20} class="text-current" />
+      </a>
+    </ul>
+    <button
+      data-collapse-toggle="navbar"
+      type="button"
+      aria-controls="navbar"
+      aria-expanded="false"
+      class="social sm:hidden focus:ring focus:ring-grey-50"
+    >
+      <span class="sr-only">Open menu</span>
+      <Icon name="menu" size={20} id="menu" />
+      <Icon name="close" size={20} id="close" />
+    </button>
+  </nav>
+</header>

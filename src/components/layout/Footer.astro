@@ -1,0 +1,102 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+import SignUp from "@components/SignUp.astro";
+
+import logo from "@assets/graphics/logos/footer.png";
+
+const links: { name: string; label: string; href: string }[] = [
+  {
+    name: `mail`,
+    label: `Email`,
+    href: `mailto:press@goblindelight.com`,
+  },
+  {
+    name: `twitter`,
+    label: `X`,
+    href: ``,
+  },
+  {
+    name: `twitch`,
+    label: `Twitch`,
+    href: ``,
+  },
+  {
+    name: `steam`,
+    label: `Steam`,
+    href: ``,
+  },
+];
+---
+
+<footer id="footer" class="bg-grey-950 border-t-2 border-blue-300 pt-10 pb-8 lg:pt-14 lg:pb-10">
+  <div class="wrapper body">
+    <div class="left">
+      <a href="/" class="logo" aria-label="Home">
+        <Image
+          src={logo}
+          alt="Yum Yum Bloodgun"
+          class="w-full h-auto"
+          loading="lazy"
+          quality={100}
+        />
+      </a>
+      <div class="icons">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              class="social"
+              aria-label={link.label}
+            >
+              <Icon name={link.name} size={28} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="right">
+      <div class="space-y-2">
+        <SignUp />
+        <h2 class="waitlist">Waitlist for early access beta</h2>
+      </div>
+      <div class="w-full md:flex md:flex-row md:items-center md:justify-between">
+        <a href="/privacy" class="link privacy">Privacy Policy</a>
+        <p class="text-sm lg:text-base">© 2020 - {new Date().getFullYear()} Goblin Delight, LLC</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .body {
+    @apply w-full flex justify-between;
+  }
+
+  .left {
+    @apply flex flex-col justify-between;
+  }
+
+  .logo {
+    @apply hidden w-[15.5rem] h-auto sm:block md:w-[20.75rem] lg:w-[23.1875rem] xl:w-[25.8125rem] 2xl:w-[31.1875rem];
+  }
+
+  .icons {
+    @apply flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:justify-between sm:w-full sm:max-w-[15.5rem];
+  }
+
+  .right {
+    @apply flex flex-col w-[64.6%] h-full justify-between xs:w-[66.7%] sm:w-[43.8%] sm:justify-start sm:space-y-8 lg:w-[44.2%] xl:w-[36.25%] xl:space-y-10 2xl:w-[36.3%];
+  }
+
+  .waitlist {
+    @apply font-semi text-grey-50 text-base xs:text-lg xl:text-xl;
+  }
+
+  .privacy {
+    @apply text-xl font-xbold uppercase lg:text-2xl;
+  }
+</style>
