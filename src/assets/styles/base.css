@@ -26,7 +26,7 @@
 
   /* SECTIONS */
   .left-img-col {
-    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10 xs:place-content-center xs:place-items-center;
+    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10;
 
     @media (min-width: 640px) {
       grid-template-columns: 13.875rem auto;
@@ -59,7 +59,7 @@
   }
 
   .right-img-col {
-    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10 xs:place-content-center xs:place-items-center;
+    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10;
 
     @media (min-width: 640px) {
       grid-template-columns: auto 13.875rem;
