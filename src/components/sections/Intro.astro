@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+
+import slash from "@assets/graphics/sections/hero.svg";
+---
+
+<section class="bg-grey-50">
+  <div class="inner left-img-col wrapper">
+    <div>
+      <Image
+        src={slash}
+        alt="Shoot, parry & slash -- Homunculi with sword jumping out of the center of a large, bright red circle"
+        loading="eager"
+        quality={100}
+        class="w-full"
+      />
+    </div>
+    <div>
+      <h1
+        class="font-medium text-grey-900 text-base text-center xs:text-left md:text-2xl lg:text-3xl 2xl:text-4xl"
+      >
+        Shoot, parry, and slash your way to self-awareness in the alchemy-infused dystopia of Yum
+        Yum Bloodgun, a 2D fighting game with deckbuilding mechanics and wild art — featuring
+        high-stakes duels and highly customizable fighters.
+      </h1>
+    </div>
+  </div>
+</section>
+
+<style>
+  .inner {
+    @apply w-full py-8 xs:py-10 md:py-16;
+  }
+</style>
