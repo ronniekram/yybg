@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+import kits from "@assets/graphics/sections/simple-kit.png";
+import dash from "@assets/graphics/sections/slash-and-dash.png";
+---
+
+<div class="bg-grey-900">
+  <section class="wrapper left-img-col xs:place-items-center">
+    <div>
+      <Image src={kits} alt="" loading="lazy" quality={100} class="w-full" />
+    </div>
+    <div class="content-wrapper">
+      <h2 class="heading">Simple Kit, Complex Systems</h2>
+      <p class="text-sm md:text-base lg:text-xl 2xl:text-2xl leading-[1.5]">
+        YYBG taps into the tension of fighting games without intimidating move-lists or combos,
+        while staying deep for experienced players and theory-crafters via fluid combat and our
+        deckbuilder-esque upgrade system.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrapper right-img-col xs:place-items-center">
+    <div class="content-wrapper">
+      <h2 class="heading">Slash-and-dash</h2>
+      <p class="text-sm md:text-base lg:text-xl 2xl:text-2xl leading-[1.5]">
+        Reload your bloodgun by landing hits with your sword; parry bullets; dash in the air and
+        across the ground; and draft upgrades between rounds to enhance your core skills and stats.
+      </p>
+    </div>
+    <div>
+      <Image src={dash} alt="" loading="lazy" quality={100} class="w-full" />
+    </div>
+  </section>
+</div>
+
+<style>
+  .heading {
+    @apply font-bold text-blue-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .content-wrapper {
+    @apply space-y-1 text-center xs:text-left xs:h-full xs:flex xs:flex-col xs:justify-center lg:space-y-2;
+  }
+</style>

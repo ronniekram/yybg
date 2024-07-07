@@ -26,7 +26,7 @@
 
   /* SECTIONS */
   .left-img-col {
-    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10;
+    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10 md:py-16;
 
     @media (min-width: 640px) {
       grid-template-columns: 13.875rem auto;

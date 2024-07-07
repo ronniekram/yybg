@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+
+import weird from "@assets/graphics/sections/weird-new-world.png";
+import weirdText from "@assets/graphics/sections/weird-world-text.png";
+---
+
+<section
+  class="bg-grey-50 flex flex-col items-center gap-y-8 pb-8 xs:gap-y-10 xs:pb-10 md:pb-16 md:gap-y-16 lg:gap-y-20"
+>
+  <div class="wrapper left-img-col xs:place-items-center">
+    <div>
+      <Image src={weirdText} alt="Weird new World" class="w-full" loading="lazy" />
+    </div>
+    <div>
+      <h2
+        class="font-medium text-grey-900 text-base text-center xs:text-left md:text-2xl lg:text-3xl 2xl:text-4xl"
+      >
+        Discover the mystic science powering your homunculi and the strange symbiosis enhancing the
+        growing sentience within.
+      </h2>
+    </div>
+  </div>
+
+  <Image
+    src={weird}
+    alt="Rotating lineup of boofer pups"
+    class="wide-img"
+    loading="lazy"
+    quality={100}
+  />
+</section>
+
+<style>
+  .wide-img {
+    @apply w-full xs:w-[66%];
+  }
+</style>
