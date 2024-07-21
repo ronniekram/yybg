@@ -92,13 +92,17 @@ export default {
         "2xl": `0px 32px 64px -12px rgba(0, 0, 0, 0.14)`,
       },
 			screens: {
-				xs: `640px`,
-				sm: `768px`,
-				md: `1024px`,
-				lg: `1280px`,
-				xl: `1440px`,
-				"2xl": `1728px`,
-			}
+				sm: `640px`,
+				md: `768px`,
+				lg: `1024px`,
+				xl: `1280px`,
+				"2xl": `1440px`,
+				"3xl": `1728px`,
+			},
+			backgroundImage: {
+				"red-TL": `linear-gradient(113.61deg, #FF004E 29.67%, #2E292A 29.67%)`,
+				"red-BL": `linear-gradient(36.9deg, #FF004E 30.15%, #2E292A 30.15%)`,
+			},
     },
 	},
 };

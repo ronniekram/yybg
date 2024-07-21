@@ -7,12 +7,12 @@
 @layer base {
   /* BASE CONTAINER PADDING/WIDTH */
   .wrapper {
-    @apply mx-auto w-full max-w-[96rem] px-[6.1%] xs:px-[5%] sm:px-[5.2%] md:px-[5.5%] lg:px-[5%] xl:px-[5.5%] 2xl:px-0;
+    @apply mx-auto w-full max-w-[96rem] px-[6.15%] sm:px-[5%] md:px-[5.2%] lg:px-[5.5%] xl:px-[5%] 2xl:px-[5.2%] 3xl:px-0;
   }
 
   /* LINKS */
   .link {
-    @apply text-blue-100 transition duration-300 ease-in-out hover:text-blue-200;
+    @apply text-blue-100 transition duration-300 ease-in-out hover:text-blue-200 font-medium;
   }
 
   /* BUTTONS */
@@ -24,72 +24,22 @@
     @apply w-11 h-11 rounded grid place-items-center bg-red-500 text-grey-50 shadow-xs transition duration-300 ease-in-out hover:bg-red-600 hover:shadow-sm active:bg-red-700 active:shadow-sm;
   }
 
-  /* SECTIONS */
-  .left-img-col {
-    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10 md:py-16;
-
-    @media (min-width: 640px) {
-      grid-template-columns: 13.875rem auto;
-      @apply gap-[9%];
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: 17.625rem auto;
-      @apply gap-[7%];
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: 23.1875rem auto;
-      @apply gap-[7.5%];
-    }
-
-    @media (min-width: 1280px) {
-      grid-template-columns: 30.5rem auto;
-      @apply gap-[6.1%];
-    }
-
-    @media (min-width: 1440px) {
-      grid-template-columns: 33.875rem auto;
-    }
-
-    @media (min-width: 1728px) {
-      grid-template-columns: 40.5rem auto;
-      @apply gap-[7.15%];
-    }
+  .base {
+    @apply grid grid-cols-6 gap-2 sm:grid-cols-8 sm:gap-4 lg:grid-cols-10 xl:gap-5 2xl:grid-cols-12;
   }
 
-  .right-img-col {
-    @apply w-full grid grid-cols-1 gap-5 py-8 xs:py-10 md:py-16;
-
-    @media (min-width: 640px) {
-      grid-template-columns: auto 13.875rem;
-      @apply gap-[9%];
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: auto 17.625rem;
-      @apply gap-[7%];
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: auto 23.1875rem;
-      @apply gap-[7.5%];
-    }
-
-    @media (min-width: 1280px) {
-      grid-template-columns: auto 30.5rem;
-      @apply gap-[6.1%];
-    }
-
-    @media (min-width: 1440px) {
-      grid-template-columns: auto 33.875rem;
-    }
-
-    @media (min-width: 1728px) {
-      grid-template-columns: auto 40.5rem;
-      @apply gap-[7.15%];
-    }
+  .img-col {
+    @apply col-span-6 sm:col-span-3 lg:col-span-4 2xl:col-span-5;
   }
+
+  .content-col {
+    @apply col-span-6 sm:col-span-5 2xl:col-span-6;
+  }
+
+  .transition-setting {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {

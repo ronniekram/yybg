@@ -2,35 +2,152 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
-import logo from "@assets/graphics/logos/nav.png";
+import logo from "@assets/graphics/logo/stacked.png";
 ---
 
-<header class="bg-grey-950 py-4 xs:py-5 border-b-2 border-blue-300">
-  <nav class="flex items-center justify-between wrapper">
-    <a class="w-[8.85625rem] h-11" href="/" aria-label="Home">
-      <Image src={logo} alt="Yum Yum Bloodgun" loading="eager" quality={100} />
-    </a>
-
-    <ul
-      class="hidden xs:flex items-center space-x-6 md:space-x-8 2xl:space-x-10 font-medium text-2xl xl:text-3xl"
-    >
-      <a href="/press" class="link">Press Kit</a>
-      <a href="#footer" class="link">Contact</a>
-      <a href="" target="_blank" rel="noreferrer" class="link flex items-center space-x-2">
-        <span>Steam</span>
-        <Icon name="external" size={20} class="text-current" />
+<>
+  <header class="bg-grey-950 py-4 sm:py-5 border-b-2 border-blue-200">
+    <nav class="wrapper base">
+      <a href="/" class="col-span-3 sm:col-span-2">
+        <Image
+          src={logo}
+          alt="Yum Yum Bloodgun: Home page"
+          aria-label="Home page"
+          loading="eager"
+          class="w-full h-auto"
+        />
       </a>
-    </ul>
-    <button
-      data-collapse-toggle="navbar"
-      type="button"
-      aria-controls="navbar"
-      aria-expanded="false"
-      class="social sm:hidden focus:ring focus:ring-grey-50"
-    >
-      <span class="sr-only">Open menu</span>
-      <Icon name="menu" size={20} id="menu" />
-      <Icon name="close" size={20} id="close" />
-    </button>
+
+      <ul class="hidden md:flex link-list">
+        <li class="link">
+          <a href="/press-kit/">Press Kit</a>
+        </li>
+        <li class="link">
+          <a href="#footer">Contact</a>
+        </li>
+        <li class="link">
+          <a href="#" target="_blank" rel="noreferrer" class="flex items-center gap-x-2">
+            <span>Steam</span>
+            <Icon name="external" size={20} />
+          </a>
+        </li>
+      </ul>
+
+      <div class="col-span-1 col-start-6 sm:col-start-8 md:hidden">
+        <button
+          type="button"
+          class="social"
+          id="menu-toggle"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-labelledby="mobile-label"
+        >
+          <span id="mobile-label" class="sr-only">Mobile menu</span>
+          <Icon name="menu" size={28} id="menu-icon" />
+          <Icon name="close" size={28} id="close-icon" />
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <nav id="mobile-nav" aria-hidden="true">
+    <div class="wrapper overflow-hidden">
+      <ul class="mobile-list overflow-hidden">
+        <li>
+          <a href="/press-kit/">Press Kit</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        <li>
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center gap-x-2 justify-center"
+          >
+            <span>Steam</span>
+            <Icon name="external" size={20} />
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
-</header>
+</>
+
+<style>
+  .link-list {
+    @apply items-center justify-between text-xl font-medium md:text-2xl md:col-span-5 md:col-start-4 lg:col-start-6 xl:col-start-7 xl:col-span-4 2xl:col-start-10;
+
+    li {
+      @apply md:text-blue-100 md:hover:text-blue-200;
+    }
+  }
+
+  .mobile-list {
+    @apply w-full grid grid-cols-3 gap-2 text-xl font-medium text-grey-950 hover:text-grey-900;
+
+    li {
+      @apply w-full text-center py-5;
+    }
+  }
+
+  #mobile-nav {
+    @apply md:hidden bg-blue-300;
+    display: grid;
+    transition: grid-template-rows 300ms ease-in-out;
+  }
+
+  #mobile-nav[aria-hidden="true"] {
+    grid-template-rows: 0;
+  }
+
+  #mobile-nav[aria-hidden="false"] {
+    grid-template-rows: 1;
+  }
+
+  #menu-toggle[aria-expanded="false"] {
+    & > #close-icon {
+      @apply hidden;
+    }
+
+    & > #menu-icon {
+      @apply block;
+    }
+  }
+
+  #menu-toggle[aria-expanded="true"] {
+    & > #close-icon {
+      @apply block;
+    }
+
+    & > #menu-icon {
+      @apply hidden;
+    }
+  }
+</style>
+
+<script>
+  /* Menu toggle button */
+  const toggle = document.getElementById(`menu-toggle`);
+  /* Mobile menu */
+  const mobileNav = document.getElementById(`mobile-nav`);
+
+  const flipSwitch = () => {
+    if (toggle) {
+      toggle.addEventListener(`click`, () => {
+        if (mobileNav) {
+          if (toggle.ariaExpanded === "true") {
+            toggle.ariaExpanded = `false`;
+            mobileNav.ariaHidden = `true`;
+          } else {
+            toggle.ariaExpanded = `true`;
+            mobileNav.ariaHidden = `false`;
+          }
+        }
+      });
+    }
+  };
+
+  document.addEventListener(`DOMContentLoaded`, flipSwitch);
+</script>
