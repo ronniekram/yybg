@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import logo from "@assets/graphics/logo/wide.png";
+---
+
+<section class="w-full">
+  <h1 class="sr-only">Yum Yum Bloodgun</h1>
+  <div class="wrapper base place-content-end h-full">
+    <div class="logo">
+      <Image
+        src={logo}
+        alt="Text reading: Yum Yum Bloodgun"
+        loading="eager"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    @apply w-full h-[15.625rem] lg:h-[21.875rem] 2xl:h-[28.125rem] py-6 lg:py-10;
+    background: linear-gradient(180deg, rgba(33, 28, 30, 0.25) 0%, rgba(33, 28, 30, 0.25) 100%),
+      url("/images/backgrounds/heavenly-riposte.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .logo {
+    @apply col-span-6 sm:col-span-5 lg:col-span-6 2xl:col-span-7 col-start-1;
+  }
+</style>
