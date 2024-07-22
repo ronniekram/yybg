@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import slashDash from "@assets/graphics/slash-dash.png";
+---
+
+<section class="wrapper base">
+  <div class="content-col flex flex-col justify-center gap-y-1">
+    <h2 class="heading">Slash-and-dash</h2>
+    <p class="p-body">
+      Reload your bloodgun by landing hits with your sword; parry bullets; dash in the air and
+      across the ground; and draft upgrades between rounds to enhance your core skills and stats.
+    </p>
+  </div>
+  <div class="img-col lg:col-start-7 2xl:col-start-8">
+    <Image src={slashDash} alt="" loading="lazy" class="w-full h-auto" />
+  </div>
+</section>
+
+<style>
+  section {
+    @apply py-10 xl:py-16 place-content-center;
+  }
+
+  .heading {
+    @apply text-blue-300 font-bold text-center sm:text-left text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+
+  .p-body {
+    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+  }
+</style>
