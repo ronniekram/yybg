@@ -100,7 +100,7 @@ export default {
 				"3xl": `1728px`,
 			},
 			backgroundImage: {
-				"red-TL": `linear-gradient(113.61deg, #FF004E 29.67%, #2E292A 29.67%)`,
+				"red-TL": `linear-gradient(144.38deg, #ff004e 33.1%, #2e292a 33.1%)`,
 				"red-BL": `linear-gradient(36.9deg, #FF004E 30.15%, #2E292A 30.15%)`,
 			},
     },

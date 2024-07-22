@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import dunk from "@assets/graphics/gif/alchemist-dunk.gif";
+---
+
+<section>
+  <div class="wrapper base">
+    <div class="img-col">
+      <Image src={dunk} alt="" loading="lazy" class="w-full h-auto mix-blend-luminosity" />
+    </div>
+    <div
+      class="content-col h-full flex flex-col justify-center gap-y-1 xl:col-start-6 2xl:col-start-7"
+    >
+      <h2 class="heading">Simple Kit, Complex Systems</h2>
+      <p class="p-body">
+        YYBG taps into the tension of fighting games without intimidating move-lists or combos,
+        while staying deep for experienced players and theory-crafters via fluid combat and our
+        deckbuilder-esque upgrade system.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    @apply py-10 xl:py-16 place-content-center bg-red-TL;
+    /* background: linear-gradient(144.38deg, #ff004e 33.1%, #2e292a 33.1%); */
+  }
+
+  .heading {
+    @apply text-red-500 font-bold text-center text-balance sm:text-left text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+
+  .p-body {
+    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+  }
+</style>
