@@ -1,6 +1,8 @@
 ---
 import { SEO } from "astro-seo";
 
+import og from "../../public/opengraph.png";
+
 import Nav from "@components/layout/Nav.astro";
 // import Footer from "@components/layout/Footer.astro";
 
@@ -18,7 +20,7 @@ const { title, description } = Astro.props;
         basic: {
           title,
           type: `site`,
-          image: `https://raw.githubusercontent.com/ronniekram/yybg/main/public/opengraph.png`,
+          image: og.src,
         },
         optional: {
           siteName: `Yum Yum Bloodgun`,
@@ -30,7 +32,7 @@ const { title, description } = Astro.props;
         meta: [
           {
             name: `twitter:image`,
-            content: `/opengraph.png`,
+            content: og.src,
           },
           { name: `twitter:title`, content: title },
           { name: `twitter:description`, content: description },
