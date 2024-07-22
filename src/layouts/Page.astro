@@ -18,7 +18,11 @@ const { title, description } = Astro.props;
         basic: {
           title,
           type: `site`,
-          image: `/opengraph.png`,
+          image: `https://raw.githubusercontent.com/ronniekram/yybg/main/public/opengraph.png`,
+        },
+        optional: {
+          siteName: `Yum Yum Bloodgun`,
+          description,
         },
       }}
       extend={{
@@ -30,6 +34,7 @@ const { title, description } = Astro.props;
           },
           { name: `twitter:title`, content: title },
           { name: `twitter:description`, content: description },
+          { name: `twitter:card`, content: `summary_large` },
         ],
       }}
     />
