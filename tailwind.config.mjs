@@ -101,7 +101,7 @@ export default {
 			},
 			backgroundImage: {
 				"red-TL": `linear-gradient(144.38deg, #ff004e 33.1%, #2e292a 33.1%)`,
-				"red-BL": `linear-gradient(36.9deg, #FF004E 30.15%, #2E292A 30.15%)`,
+				"red-BL": `linear-gradient(20.59deg, #FF004E 33.25%, #2E292A 33.25%)`,
 			},
     },
 	},
