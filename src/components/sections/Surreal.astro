@@ -5,7 +5,7 @@ import surreal from "@assets/graphics/surreal.png";
 
 <section>
   <div class="wrapper base">
-    <div class="img-col order-2 sm:order-1">
+    <div class="img-col img-wrap order-2 sm:order-1">
       <Image src={surreal} alt="" loading="lazy" class="w-full h-auto" />
     </div>
     <div
@@ -31,5 +31,13 @@ import surreal from "@assets/graphics/surreal.png";
 
   .p-body {
     @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+  }
+
+  .img-wrap {
+    @apply rounded-tl-[12.5%] rounded-br-[12.5%] rounded-tr rounded-bl overflow-hidden;
+    filter: drop-shadow(
+      0px 20px 24px -4px rgba(0, 0, 0, 0.1),
+      0px 8px 8px -4px rgba(0, 0, 0, 0.04)
+    );
   }
 </style>
