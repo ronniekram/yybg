@@ -7,11 +7,11 @@ import welcome from "@assets/graphics/welcome.png";
   <div class="wrapper base">
     <div class="img-col order-2 sm:order-1">
       <div class="img-wrap">
-        <Image src={welcome} alt="" loading="lazy" class="w-full h-auto" width={628} height={437} />
+        <Image src={welcome} alt="" loading="lazy" class="h-auto w-full" width={628} height={437} />
       </div>
     </div>
     <div
-      class="content-col h-full flex flex-col justify-center gap-y-1 order-1 sm:order-2 xl:col-start-6 2xl:col-start-7"
+      class="content-col order-1 flex h-full flex-col justify-center gap-y-1 sm:order-2 xl:col-start-6 2xl:col-start-7"
     >
       <h2 class="heading">Welcome, Fermentationist...</h2>
       <p class="p-body">
@@ -25,17 +25,17 @@ import welcome from "@assets/graphics/welcome.png";
 
 <style>
   section {
-    @apply pt-10 xl:pt-16 place-content-end;
+    @apply place-content-end pt-10 xl:pt-16;
     background: url("/images/backgrounds/mountain.webp");
     background-size: cover;
     background-position: center;
   }
 
   .heading {
-    @apply text-blue-300 font-bold text-center sm:text-left text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+    @apply text-center text-3xl font-bold text-blue-300 sm:text-left lg:text-4xl xl:text-5xl 2xl:text-6xl;
   }
 
   .p-body {
-    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-2xl;
+    @apply text-center text-sm sm:text-left lg:text-base xl:text-lg 2xl:text-2xl;
   }
 </style>

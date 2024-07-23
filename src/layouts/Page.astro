@@ -4,7 +4,7 @@ import { SEO } from "astro-seo";
 import og from "../../public/opengraph.png";
 
 import Nav from "@components/layout/Nav.astro";
-// import Footer from "@components/layout/Footer.astro";
+import Footer from "@components/layout/Footer.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -66,6 +66,6 @@ const { title, description } = Astro.props;
     <main>
       <slot />
     </main>
-    <!-- <Footer /> -->
+    <Footer />
   </body>
 </html>

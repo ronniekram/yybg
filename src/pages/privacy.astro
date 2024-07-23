@@ -14,8 +14,8 @@ const date = new Date(data.lastUpdated).toLocaleDateString(`en-us`, {
 
 <Page title={data.title} description={data.description}>
   <article class="body">
-    <section class="w-fit text-center flex flex-col gap-y-3">
-      <h1 class="font-xbold text-5xl sm:text-6xl md:text-7xl">{data.title}</h1>
+    <section class="flex w-fit flex-col gap-y-3 text-center">
+      <h1 class="text-5xl font-xbold sm:text-6xl md:text-7xl">{data.title}</h1>
       <p class="text-sm italic md:text-base">Last updated: {date}</p>
     </section>
     {
@@ -30,18 +30,18 @@ const date = new Date(data.lastUpdated).toLocaleDateString(`en-us`, {
 
 <style>
   .body {
-    @apply w-full flex flex-col items-center mx-auto max-w-[57rem] space-y-10 pt-14 pb-24 md:space-y-14 md:pt-16 md:pb-32 px-[6.1%] sm:px-[5%] md:px-[5.2%] lg:px-0;
+    @apply mx-auto flex w-full max-w-[57rem] flex-col items-center space-y-10 px-[6.1%] pb-24 pt-14 sm:px-[5%] md:space-y-14 md:px-[5.2%] md:pb-32 md:pt-16 lg:px-0;
   }
 
   .policy-section {
     @apply flex flex-col gap-y-2 md:gap-y-2.5;
 
     h2 {
-      @apply font-bold text-grey-100 text-3xl sm:text-4xl md:text-5xl;
+      @apply text-3xl font-bold text-grey-100 sm:text-4xl md:text-5xl;
     }
   }
 
   .content {
-    @apply gap-y-3 text-sm md:text-base flex flex-col;
+    @apply flex flex-col gap-y-3 text-sm md:text-base;
   }
 </style>

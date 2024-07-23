@@ -8,5 +8,5 @@ const privacyCollection = defineCollection({
 });
 
 export const collections = {
-  "privacy": privacyCollection,
+  privacy: privacyCollection,
 };

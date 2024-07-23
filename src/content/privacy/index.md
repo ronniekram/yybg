@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: Yum Yum Bloodgun website privacy policy
-lastUpdated: '2023-04-08'
+lastUpdated: "2023-04-08"
 
 policy:
   - heading: General

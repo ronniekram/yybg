@@ -12,6 +12,6 @@ module.exports = {
   bracketSpacing: true,
   arrowParens: `always`,
 
-  plugins: [require.resolve(`prettier-plugin-astro`)],
+  plugins: [require.resolve(`prettier-plugin-astro`), "prettier-plugin-tailwindcss"],
   overrides: [{ files: `*.astro`, options: { parser: `astro` } }],
 };

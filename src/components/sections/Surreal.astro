@@ -6,10 +6,10 @@ import surreal from "@assets/graphics/surreal.webp";
 <section>
   <div class="wrapper base">
     <div class="img-col img-wrap order-2 sm:order-1">
-      <Image src={surreal} alt="" loading="lazy" class="w-full h-auto" width={628} height={628} />
+      <Image src={surreal} alt="" loading="lazy" class="h-auto w-full" width={628} height={628} />
     </div>
     <div
-      class="content-col h-full flex flex-col justify-center gap-y-1 order-1 sm:order-2 xl:col-start-6 2xl:col-start-7"
+      class="content-col order-1 flex h-full flex-col justify-center gap-y-1 sm:order-2 xl:col-start-6 2xl:col-start-7"
     >
       <h2 class="heading">Surreal. Esoteric. Artful.</h2>
       <p class="p-body">
@@ -22,19 +22,19 @@ import surreal from "@assets/graphics/surreal.webp";
 
 <style>
   section {
-    @apply py-10 xl:py-16 place-content-center;
+    @apply place-content-center py-10 xl:py-16;
   }
 
   .heading {
-    @apply text-blue-300 font-bold text-center sm:text-left text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+    @apply text-center text-2xl font-bold text-blue-300 sm:text-left lg:text-3xl xl:text-4xl 2xl:text-5xl;
   }
 
   .p-body {
-    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+    @apply text-center text-sm sm:text-left lg:text-base xl:text-lg 2xl:text-xl;
   }
 
   .img-wrap {
-    @apply rounded-tl-[12.5%] rounded-br-[12.5%] rounded-tr rounded-bl overflow-hidden;
+    @apply overflow-hidden rounded-bl rounded-br-[12.5%] rounded-tl-[12.5%] rounded-tr;
     filter: drop-shadow(
       0px 20px 24px -4px rgba(0, 0, 0, 0.1),
       0px 8px 8px -4px rgba(0, 0, 0, 0.04)

@@ -10,13 +10,13 @@ import dunk from "@assets/graphics/gif/dunk.gif";
         src={dunk}
         alt=""
         loading="lazy"
-        class="w-full h-auto mix-blend-luminosity"
+        class="h-auto w-full mix-blend-luminosity"
         width={628}
         height={524}
       />
     </div>
     <div
-      class="content-col h-full flex flex-col justify-center gap-y-1 xl:col-start-6 2xl:col-start-7"
+      class="content-col flex h-full flex-col justify-center gap-y-1 xl:col-start-6 2xl:col-start-7"
     >
       <h2 class="heading">Simple Kit, Complex Systems</h2>
       <p class="p-body">
@@ -30,15 +30,15 @@ import dunk from "@assets/graphics/gif/dunk.gif";
 
 <style>
   section {
-    @apply py-10 xl:py-16 place-content-center bg-red-TL;
+    @apply place-content-center bg-red-TL py-10 xl:py-16;
     /* background: linear-gradient(144.38deg, #ff004e 33.1%, #2e292a 33.1%); */
   }
 
   .heading {
-    @apply text-red-500 font-bold text-center text-balance sm:text-left text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+    @apply text-balance text-center text-2xl font-bold text-red-500 sm:text-left lg:text-3xl xl:text-4xl 2xl:text-5xl;
   }
 
   .p-body {
-    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+    @apply text-center text-sm sm:text-left lg:text-base xl:text-lg 2xl:text-xl;
   }
 </style>

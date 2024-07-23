@@ -6,7 +6,7 @@ import logo from "@assets/graphics/logo/tall.webp";
 ---
 
 <>
-  <header class="bg-grey-950 py-4 sm:py-5 border-b-2 border-blue-200">
+  <header class="border-b-2 border-blue-200 bg-grey-950 py-4 sm:py-5">
     <nav class="wrapper base">
       <a href="/" class="col-span-3 sm:col-span-2">
         <Image
@@ -14,13 +14,13 @@ import logo from "@assets/graphics/logo/tall.webp";
           alt="Yum Yum Bloodgun: Home page"
           aria-label="Home page"
           loading="eager"
-          class="w-full h-auto"
+          class="h-auto w-full"
           width={236}
           height={74}
         />
       </a>
 
-      <ul class="hidden md:flex link-list">
+      <ul class="link-list hidden md:flex">
         <li class="link">
           <a href="/press-kit/">Press Kit</a>
         </li>
@@ -66,7 +66,7 @@ import logo from "@assets/graphics/logo/tall.webp";
             href="#"
             target="_blank"
             rel="noreferrer"
-            class="flex items-center gap-x-2 justify-center"
+            class="flex items-center justify-center gap-x-2"
           >
             <span>Steam</span>
             <Icon name="external" size={20} />
@@ -79,7 +79,7 @@ import logo from "@assets/graphics/logo/tall.webp";
 
 <style>
   .link-list {
-    @apply items-center justify-between text-xl font-medium md:text-2xl md:col-span-5 md:col-start-4 lg:col-start-6 xl:col-start-7 xl:col-span-4 2xl:col-start-10;
+    @apply items-center justify-between text-xl font-medium md:col-span-5 md:col-start-4 md:text-2xl lg:col-start-6 xl:col-span-4 xl:col-start-7 2xl:col-start-10;
 
     li {
       @apply md:text-blue-100 md:hover:text-blue-200;
@@ -87,15 +87,15 @@ import logo from "@assets/graphics/logo/tall.webp";
   }
 
   .mobile-list {
-    @apply w-full grid grid-cols-3 gap-2 text-xl font-medium text-grey-950 hover:text-grey-900;
+    @apply grid w-full grid-cols-3 gap-2 text-xl font-medium text-grey-950 hover:text-grey-900;
 
     li {
-      @apply w-full text-center py-5;
+      @apply w-full py-5 text-center;
     }
   }
 
   #mobile-nav {
-    @apply md:hidden bg-blue-300;
+    @apply bg-blue-300 md:hidden;
     display: grid;
     transition: grid-template-rows 300ms ease-in-out;
   }

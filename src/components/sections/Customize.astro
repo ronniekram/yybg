@@ -11,13 +11,13 @@ import customize from "@assets/graphics/customize.webp";
         src={alchemist}
         alt=""
         loading="lazy"
-        class="w-full h-auto mix-blend-luminosity"
+        class="h-auto w-full mix-blend-luminosity"
         width={499}
         height={499}
       />
     </div>
-    <div class="right h-full flex flex-col justify-center gap-y-1">
-      <Image src={customize} alt="" class="w-full h-auto" loading="lazy" width={888} height={203} />
+    <div class="right flex h-full flex-col justify-center gap-y-1">
+      <Image src={customize} alt="" class="h-auto w-full" loading="lazy" width={888} height={203} />
       <h2 class="heading">Customize Your Homunculi</h2>
       <p class="p-body">
         Discover new card synergies while customizing your build with gear won in both the
@@ -30,22 +30,22 @@ import customize from "@assets/graphics/customize.webp";
 
 <style>
   section {
-    @apply py-10 xl:py-16 place-content-center bg-red-BL;
+    @apply place-content-center bg-red-BL py-10 xl:py-16;
   }
 
   .left {
-    @apply col-span-6 sm:col-span-3 lg:col-span-4 xl:col-span-3 2xl:col-span-4 order-2 sm:order-1;
+    @apply order-2 col-span-6 sm:order-1 sm:col-span-3 lg:col-span-4 xl:col-span-3 2xl:col-span-4;
   }
 
   .right {
-    @apply col-span-6 sm:col-span-5 lg:col-span-6 xl:col-start-5 2xl:col-span-7 2xl:col-start-6 order-1 sm:order-2;
+    @apply order-1 col-span-6 sm:order-2 sm:col-span-5 lg:col-span-6 xl:col-start-5 2xl:col-span-7 2xl:col-start-6;
   }
 
   .heading {
-    @apply text-red-500 font-bold text-center text-balance sm:text-left text-2xl md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-6xl pt-2;
+    @apply text-balance pt-2 text-center text-2xl font-bold text-red-500 sm:text-left md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-6xl;
   }
 
   .p-body {
-    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+    @apply text-center text-sm sm:text-left lg:text-base xl:text-lg 2xl:text-xl;
   }
 </style>

@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import logo from "@assets/graphics/logo/tall.webp";
+
+import Newsletter from "../misc/Newsletter.astro";
+
+type Social = {
+  icon: string;
+  href: string;
+  label: string;
+};
+
+const socials: Social[] = [
+  {
+    icon: `mail`,
+    href: `mailto:info@goblindelight.com`,
+    label: `Email`,
+  },
+  {
+    icon: `twitter`,
+    href: `#`,
+    label: `Twitter`,
+  },
+  {
+    icon: `twitch`,
+    href: `#`,
+    label: `Twitch`,
+  },
+  {
+    icon: `steam`,
+    href: `#`,
+    label: `Steam page`,
+  },
+];
+---
+
+<footer class="border-t-2 border-blue-200 bg-grey-950 py-10 lg:py-14">
+  <div class="wrapper base">
+    <div class="left-col">
+      <a href="/" class="w-full hidden md:block" aria-label="Home">
+        <Image src={logo} alt="Yum Yum Bloodgun" loading="lazy" class="w-full" />
+      </a>
+
+      <div class="socials">
+        {
+          socials.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              class="social"
+              aria-label={social.label}
+            >
+              <Icon name={social.icon} size={28} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="top">
+        <h2>Early access beta waitlist</h2>
+        <Newsletter />
+      </div>
+      <div class="bottom">
+        <a class="link font-semibold xl:text-lg" href="/privacy">Privacy Policy</a>
+        <p class="text-sm">© 2020 - {new Date().getFullYear()} Goblin Delight, LLC</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .left-col {
+    @apply col-span-1 md:col-span-3 lg:col-span-4 xl:col-span-3 flex flex-col md:gap-y-8;
+  }
+
+  .socials {
+    @apply w-fit flex flex-col items-center gap-y-2 sm:gap-y-3 md:flex-row md:gap-y-0 md:justify-between md:w-full md:max-w-[15.5rem];
+  }
+
+  .right-col {
+    @apply col-span-5 md:col-span-4 lg:col-span-5 flex flex-col justify-between sm:col-start-4 md:col-start-5 lg:col-start-6 2xl:col-start-8;
+  }
+
+  .top {
+    @apply w-full flex flex-col gap-y-1 xl:gap-y-2;
+
+    h2 {
+      @apply font-medium sm:text-lg lg:text-xl xl:text-2xl;
+    }
+  }
+
+  .bottom {
+    @apply flex flex-col gap-y-1 lg:flex-row lg:gap-y-0 lg:items-center lg:justify-between;
+  }
+</style>

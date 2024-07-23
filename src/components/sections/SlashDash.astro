@@ -12,20 +12,20 @@ import slashDash from "@assets/graphics/slash-dash.webp";
     </p>
   </div>
   <div class="img-col lg:col-start-7 2xl:col-start-8">
-    <Image src={slashDash} alt="" loading="lazy" class="w-full h-auto" width={628} height={550} />
+    <Image src={slashDash} alt="" loading="lazy" class="h-auto w-full" width={628} height={550} />
   </div>
 </section>
 
 <style>
   section {
-    @apply py-10 xl:py-16 place-content-center;
+    @apply place-content-center py-10 xl:py-16;
   }
 
   .heading {
-    @apply text-blue-300 font-bold text-center sm:text-left text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+    @apply text-center text-2xl font-bold text-blue-300 sm:text-left lg:text-3xl xl:text-4xl 2xl:text-5xl;
   }
 
   .p-body {
-    @apply text-center sm:text-left text-sm lg:text-base xl:text-lg 2xl:text-xl;
+    @apply text-center text-sm sm:text-left lg:text-base xl:text-lg 2xl:text-xl;
   }
 </style>
