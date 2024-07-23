@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+
+import villager from "@assets/graphics/gif/villager.gif";
+
+import Newsletter from "@components/misc/Newsletter.astro";
+---
+
+<section
+  class="bg-blue-300 h-[25rem] sm:h-[15.625rem] lg:h-[23.4375rem] xl:h-[25rem] 2xl:h-[31.25rem] py-11 relative"
+>
+  <div class="wrapper base sm:place-content-center h-full">
+    <div class="w-full col-span-6 sm:col-span-5 md:col-span-4 lg:col-span-5 relative z-10">
+      <h2 class="text-gray-900 font-medium text-xl md:text-2xl lg:text-3xl pb-2">
+        Early access beta waitlist
+      </h2>
+      <Newsletter />
+    </div>
+  </div>
+  <Image src={villager} alt="" class="sleeper" loading="lazy" />
+</section>
+
+<style>
+  .sleeper {
+    @apply w-[200%] h-auto sm:w-[31.25rem] md:w-[43.75rem] lg:w-[56.25rem] xl:w-[68.75rem] 2xl:w-[87.5rem] absolute bottom-0 right-[-30%] sm:bottom-[1rem] sm:right-[-26.4%] md:bottom-0 md:right-[-24%] lg:bottom-0 lg:right-[-21.6%] xl:bottom-[0.875rem] 2xl:right-[-20.9%] 3xl:right-[-16.4%];
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+    mask-image: url("/images/signup-mask.svg");
+    mask-size: 100%;
+  }
+</style>
