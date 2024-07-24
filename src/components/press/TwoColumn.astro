@@ -1,0 +1,29 @@
+---
+import Heading from "./Heading.astro";
+import Sub from "./Sub.astro";
+
+import { slugify } from "../../utility";
+
+interface Props {
+  heading: string;
+  sections: {
+    title: string;
+    body: string;
+  }[];
+}
+
+const { heading, sections } = Astro.props;
+---
+
+<section id={slugify(heading)} class="flex flex-col gap-y-5 lg:gap-y-6">
+  <Heading {heading} />
+  <div class="section-body">
+    {sections.map((section) => <Sub {...section} />)}
+  </div>
+</section>
+
+<style>
+  .section-body {
+    @apply grid w-full grid-cols-1 gap-4 sm:grid-cols-2 xl:gap-5;
+  }
+</style>

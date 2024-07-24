@@ -1,0 +1,53 @@
+---
+import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+import logo from "@assets/graphics/logo/wide.webp";
+
+import Page from "@layouts/Page.astro";
+import TwoColumn from "@components/press/TwoColumn.astro";
+import Section from "@components/press/Section.astro";
+
+const { data } = await getEntry(`press`, `index`);
+---
+
+<Page
+  title="Press Kit: Yum Yum Bloodgun"
+  description="Shoot, parry, and slash your way to self-awareness in the alchemy-infused dystopia of Yum Yum Bloodgun, a 2D fighting game with deckbuilding mechanics and wild art — featuring high-stakes duels and highly customizable fighters."
+>
+  <header class="wrapper flex flex-col gap-y-4 pt-10 lg:pt-16 xl:gap-y-6">
+    <Image
+      src={logo}
+      alt="Yum Yum Bloodgun"
+      class="mx-auto w-full max-w-[79.8125rem]"
+      loading="eager"
+    />
+    <h1 class="text-center text-4xl font-extrabold md:text-5xl xl:text-6xl">Press Kit</h1>
+  </header>
+
+  <article class="wrapper base mt-10 pb-32 lg:mt-16">
+    <div class="fact-sheet">
+      <TwoColumn {...data.factSheet} />
+    </div>
+    <div class="body">
+      <Section {...data.description} />
+      <Section {...data.features} />
+      <!-- VIDEOS -->
+      <!-- IMAGES -->
+      <!-- LOGOS -->
+      <Section {...data.about} />
+      <TwoColumn {...data.team} />
+      <TwoColumn {...data.contact} />
+    </div>
+  </article>
+</Page>
+
+<style>
+  .fact-sheet {
+    @apply col-span-6 w-full sm:col-span-8 md:col-span-2 lg:col-span-3;
+  }
+
+  .body {
+    @apply col-span-6 w-full sm:col-span-8 md:col-span-6 lg:col-span-7 2xl:col-span-8 2xl:col-start-4;
+  }
+</style>

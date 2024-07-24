@@ -1,0 +1,27 @@
+---
+import Heading from "./Heading.astro";
+
+import { slugify } from "../../utility";
+
+interface Props {
+  heading: string;
+  body: string;
+}
+
+const { heading, body } = Astro.props;
+---
+
+<section id={slugify(heading)} class="flex flex-col gap-y-5 lg:gap-y-6">
+  <Heading {heading} />
+  <div class="section-body" set:html={body} />
+</section>
+
+<style>
+  .section-body {
+    @apply flex flex-col gap-y-1 text-sm text-gray-50 sm:text-base xl:text-lg;
+
+    ul {
+      @apply flex list-outside list-disc flex-col space-y-1 pl-4;
+    }
+  }
+</style>

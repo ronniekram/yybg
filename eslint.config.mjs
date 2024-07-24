@@ -61,6 +61,7 @@ export default [
             "unicorn/expiring-todo-comments": "off",
             "import-quotes/import-quotes": [1, "double"],
             "import/no-anonymous-default-export": "off",
+            "css.lint.unknownAtRules": "off",
         },
     },
 ];

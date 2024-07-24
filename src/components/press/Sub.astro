@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div>
+  <h3 class="pb-0.5 text-xl font-bold text-grey-100 lg:text-2xl">{title}</h3>
+  <div set:html={body} class="sub-body" />
+</div>
+
+<style>
+  .sub-body {
+    @apply text-sm text-gray-50 lg:text-base;
+
+    ul {
+      @apply flex list-outside list-disc flex-col space-y-1 pl-4;
+    }
+  }
+</style>

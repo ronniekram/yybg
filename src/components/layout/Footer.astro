@@ -38,7 +38,7 @@ const socials: Social[] = [
 <footer class="border-t-2 border-blue-200 bg-grey-950 py-10 lg:py-14">
   <div class="wrapper base">
     <div class="left-col">
-      <a href="/" class="w-full hidden md:block" aria-label="Home">
+      <a href="/" class="hidden w-full md:block" aria-label="Home">
         <Image src={logo} alt="Yum Yum Bloodgun" loading="lazy" class="w-full" />
       </a>
 
@@ -73,19 +73,19 @@ const socials: Social[] = [
 
 <style>
   .left-col {
-    @apply col-span-1 md:col-span-3 lg:col-span-4 xl:col-span-3 flex flex-col md:gap-y-8;
+    @apply col-span-1 flex flex-col md:col-span-3 md:gap-y-8 lg:col-span-4 xl:col-span-3;
   }
 
   .socials {
-    @apply w-fit flex flex-col items-center gap-y-2 sm:gap-y-3 md:flex-row md:gap-y-0 md:justify-between md:w-full md:max-w-[15.5rem];
+    @apply flex w-fit flex-col items-center gap-y-2 sm:gap-y-3 md:w-full md:max-w-[15.5rem] md:flex-row md:justify-between md:gap-y-0;
   }
 
   .right-col {
-    @apply col-span-5 md:col-span-4 lg:col-span-5 flex flex-col justify-between sm:col-start-4 md:col-start-5 lg:col-start-6 2xl:col-start-8;
+    @apply col-span-5 flex flex-col justify-between sm:col-start-4 md:col-span-4 md:col-start-5 lg:col-span-5 lg:col-start-6 2xl:col-start-8;
   }
 
   .top {
-    @apply w-full flex flex-col gap-y-1 xl:gap-y-2;
+    @apply flex w-full flex-col gap-y-1 xl:gap-y-2;
 
     h2 {
       @apply font-medium sm:text-lg lg:text-xl xl:text-2xl;
@@ -93,6 +93,6 @@ const socials: Social[] = [
   }
 
   .bottom {
-    @apply flex flex-col gap-y-1 lg:flex-row lg:gap-y-0 lg:items-center lg:justify-between;
+    @apply flex flex-col gap-y-1 lg:flex-row lg:items-center lg:justify-between lg:gap-y-0;
   }
 </style>
