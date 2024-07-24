@@ -8,7 +8,7 @@ factSheet:
       body: <p>TBD</p>
     - title: Platforms
       body: |
-        <ul>
+        <ul class="flex list-outside list-disc flex-col space-y-1 pl-4">
           <li>Steam (PC)</li>
           <li>Steam Deck</li>
         </ul>
@@ -25,7 +25,7 @@ description:
 features:
   heading: Features
   body: |
-    <ul>
+    <ul class="flex list-outside list-disc flex-col space-y-1 pl-4">
       <li>Online multiplayer with battle-tested rollback netcode (via GGPO)</li>
       <li>Highly customizable with meaningful gear choices</li>
       <li>Tight, streamlined controls</li>
@@ -77,13 +77,13 @@ about:
 team:
   heading: Yum Yum Bloodgun Team
   sections:
-    - title: <a href="https://goblindelight.com/" class="link" target="_blank">Jer Boniface</a>
+    - title: <a href="https://goblindelight.com/" class="link font-bold" target="_blank">Jer Boniface</a>
       body: <p>Engineering, Design & Direction</p>
-    - title: <a href="https://chorizo.beer/" class="link" target="_blank">Alejandro Paz</a>
+    - title: <a href="https://chorizo.beer/" class="link font-bold" target="_blank">Alejandro Paz</a>
       body: <p>Art, World-building & Color design</p>
     - title: Seb Galvez
       body: <p>Art & Design</p>
-    - title: <a href="https://ronniebee.dev/" class="link" target="_blank">Ronnie Boniface</a>
+    - title: <a href="https://ronniebee.dev/" class="link font-bold" target="_blank">Ronnie Boniface</a>
       body: <p>Web Design & Development</p>
 
 contact:
