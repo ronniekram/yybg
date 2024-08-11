@@ -5,20 +5,22 @@
     "allowJs": true,
     "paths": {
       "@assets/*": [
-        "assets/*",
+        "assets/*"
       ],
       "@components/*": [
-        "components/*",
+        "components/*"
       ],
       "@layouts/*": [
-        "layouts/*",
+        "layouts/*"
       ],
       "@pages/*": [
-        "pages/*",
+        "pages/*"
       ],
       "@schemas/*": [
-        "schemas/*",
-      ],
+        "schemas/*"
+      ]
     },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

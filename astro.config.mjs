@@ -1,19 +1,27 @@
 import { defineConfig, passthroughImageService } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
+import { loadEnv } from "vite";
 import icon from "astro-icon";
+import react from "@astrojs/react";
+
+const { PUBLIC_SITE_URL } = loadEnv(process.env.PUBLIC_SITE_URL, process.cwd(), ``);
+
 
 // https://astro.build/config
 export default defineConfig({
+  site: PUBLIC_SITE_URL,
   integrations: [
-    icon(),
     tailwind({
-      config: { applyBaseStyles: false },
-      nesting: true,
-    }),
+      config: {
+        applyBaseStyles: false
+      },
+      nesting: true
+    }), 
+    icon(), 
+    react(),
   ],
   image: {
-    service: passthroughImageService(),
+    service: passthroughImageService()
   },
-  output: `static`,
+  output: `static`
 });

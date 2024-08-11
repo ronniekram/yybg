@@ -1,0 +1,62 @@
+---
+const common = `text-balance font-bold col-span-6 sm:col-span-8 lg:col-span-7 xl:col-span-5 2xl:col-span-6`;
+
+const left = `col-start-1`;
+
+const right = `lg:col-start-4 xl:col-start-6 2xl:col-start-7`;
+
+const span = `font-extrabold text-blue-200`;
+---
+
+<section class="relative h-[100dvh] w-full overflow-y-auto">
+  <div class="panel panel-0">
+    <div class="wrapper base">
+      <div class={`${common} ${left}`}>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl">
+          Online multiplayer with <span class={span}>battle-tested</span> rollback netcode (via GGPO)
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-1">
+    <div class="wrapper base">
+      <div class={`${common} ${right}`}>
+        <h2 class="text-4xl sm:text-6xl 2xl:text-7xl">
+          Highly customizable with <span class={span}>meaningful</span> gear choices
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-2">
+    <div class="wrapper base">
+      <div class={`${common} ${left}`}>
+        <h2 class="text-5xl sm:text-7xl md:text-8xl xl:text-7xl 2xl:text-8xl">
+          Tight, <span class={span}>streamlined</span> controls
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-3">
+    <div class="wrapper base">
+      <div class={`${common} ${right}`}>
+        <h2 class="text-3xl sm:text-5xl 2xl:text-6xl">
+          Tense, tactical 1v1 PVP where a loss means <span class={span}>relinquishing</span> a core piece
+          of your build to your opponent...
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-4">
+    <div class="wrapper base">
+      <div class={`${common} ${left}`}>
+        <h2 class="text-6xl sm:text-8xl 3xl:text-9xl">
+          Absurd, <span class={span}>grotesque</span>, and vibrant
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
