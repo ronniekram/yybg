@@ -29,11 +29,11 @@ import boofer from "@assets/graphics/boofer.webp";
   </section>
 
   <section class="wrapper inner-section img-grid">
-    <Image src={booferL} alt="" class="img outer" loading="lazy" width={240} height={411} />
+    <Image src={booferL} alt="" class="img end" loading="lazy" width={240} height={411} />
     <Image src={boofer} alt="" class="img outer" loading="lazy" width={240} height={411} />
     <Image src={booferDk} alt="" class="img center" loading="lazy" width={240} height={411} />
     <Image src={boofer} alt="" class="img outer" loading="lazy" width={240} height={411} />
-    <Image src={booferR} alt="" class="img outer" loading="lazy" width={240} height={411} />
+    <Image src={booferR} alt="" class="img end" loading="lazy" width={240} height={411} />
   </section>
 </section>
 
@@ -62,5 +62,10 @@ import boofer from "@assets/graphics/boofer.webp";
   .outer {
     -webkit-animation: pulsate-back 2s linear infinite both;
     animation: pulsate-back 2s linear infinite both;
+  }
+
+  .end {
+    -webkit-animation: pulsate 2s linear infinite both;
+    animation: pulsate 2s linear infinite both;
   }
 </style>
