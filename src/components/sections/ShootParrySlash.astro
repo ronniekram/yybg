@@ -4,7 +4,7 @@ import shoot from "@assets/graphics/shoot-parry-slash.webp";
 ---
 
 <section class="bg-grey-50">
-  <section class="wrapper base">
+  <div class="wrapper base place-items-center">
     <div class="img-col">
       <Image
         src={shoot}
@@ -15,19 +15,19 @@ import shoot from "@assets/graphics/shoot-parry-slash.webp";
         height={392}
       />
     </div>
-    <div class="content-col sm:col-start-6 2xl:col-start-7">
+    <div class="content-col sm:col-start-5 lg:col-start-6 2xl:col-start-7">
       <h2 class="heading">
         Shoot, parry, and slash your way to self-awareness in the alchemy-infused dystopia of Yum
         Yum Bloodgun, a 2D fighting game with deckbuilding mechanics and wild art — featuring
         high-stakes duels and highly customizable fighters.
       </h2>
     </div>
-  </section>
+  </div>
 </section>
 
 <style>
   section {
-    @apply place-items-center py-10 xl:py-16;
+    @apply py-10 xl:py-16;
   }
 
   .heading {

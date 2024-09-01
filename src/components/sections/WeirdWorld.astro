@@ -9,7 +9,7 @@ import boofer from "@assets/graphics/boofer.webp";
 ---
 
 <section class="flex flex-col gap-y-8 bg-grey-50 sm:gap-y-10">
-  <section class="wrapper base inner-section">
+  <section class="wrapper base inner-section pt-10 xl:pt-16">
     <div class="img-col">
       <Image
         src={weirdWorld}
@@ -20,7 +20,7 @@ import boofer from "@assets/graphics/boofer.webp";
         height={205}
       />
     </div>
-    <div class="content-col sm:col-start-6 2xl:col-start-7">
+    <div class="content-col sm:col-start-5 lg:col-start-6 2xl:col-start-7">
       <h2 class="heading">
         Discover the mystic science powering your homunculi and the strange symbiosis enhancing the
         growing sentience within.
@@ -29,17 +29,17 @@ import boofer from "@assets/graphics/boofer.webp";
   </section>
 
   <section class="wrapper inner-section img-grid">
-    <Image src={booferL} alt="" class="img" loading="lazy" width={240} height={411} />
-    <Image src={boofer} alt="" class="img" loading="lazy" width={240} height={411} />
-    <Image src={booferDk} alt="" class="img" loading="lazy" width={240} height={411} />
-    <Image src={boofer} alt="" class="img" loading="lazy" width={240} height={411} />
-    <Image src={booferR} alt="" class="img" loading="lazy" width={240} height={411} />
+    <Image src={booferL} alt="" class="img outer" loading="lazy" width={240} height={411} />
+    <Image src={boofer} alt="" class="img outer" loading="lazy" width={240} height={411} />
+    <Image src={booferDk} alt="" class="img center" loading="lazy" width={240} height={411} />
+    <Image src={boofer} alt="" class="img outer" loading="lazy" width={240} height={411} />
+    <Image src={booferR} alt="" class="img outer" loading="lazy" width={240} height={411} />
   </section>
 </section>
 
 <style>
   .inner-section {
-    @apply place-items-center py-10 xl:py-16;
+    @apply place-items-center pb-10 xl:pb-16;
   }
 
   .heading {
@@ -52,5 +52,15 @@ import boofer from "@assets/graphics/boofer.webp";
 
   .img {
     @apply h-auto w-[3.875rem] sm:w-[6.375rem] md:w-[7.8125rem] lg:w-[10.625rem] 2xl:w-[13.3125rem] 3xl:w-[15rem];
+  }
+
+  .center {
+    -webkit-animation: pulsate-fwd 2s linear infinite both;
+    animation: pulsate-fwd 2s linear infinite both;
+  }
+
+  .outer {
+    -webkit-animation: pulsate-back 2s linear infinite both;
+    animation: pulsate-back 2s linear infinite both;
   }
 </style>

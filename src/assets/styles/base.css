@@ -27,11 +27,11 @@
   }
 
   .img-col {
-    @apply col-span-6 sm:col-span-3 lg:col-span-4 2xl:col-span-5;
+    @apply col-span-6 sm:col-span-4 lg:col-span-4 2xl:col-span-5;
   }
 
   .content-col {
-    @apply col-span-6 sm:col-span-5 2xl:col-span-6;
+    @apply col-span-6 sm:col-span-4 lg:col-span-5 2xl:col-span-6;
   }
 
   .transition-setting {
@@ -68,6 +68,30 @@
   .panel-4 {
     z-index: 40;
     background-image: linear-gradient(180deg, rgba(33, 28, 30, 0.3844) 0%, rgba(33, 28, 30, 0.3844) 100%), url("/images/backgrounds/hemofission.webp");
+  }
+
+  @keyframes pulsate-fwd {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulsate-back {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
   }
 }
 
