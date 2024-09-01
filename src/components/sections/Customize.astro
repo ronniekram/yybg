@@ -7,14 +7,7 @@ import customize from "@assets/graphics/customize.webp";
 <section>
   <div class="wrapper base">
     <div class="left">
-      <Image
-        src={alchemist}
-        alt=""
-        loading="lazy"
-        class="h-auto w-full mix-blend-luminosity"
-        width={499}
-        height={499}
-      />
+      <Image src={alchemist} alt="" loading="lazy" class="h-auto w-full" width={499} height={499} />
     </div>
     <div class="right flex h-full flex-col justify-center gap-y-1">
       <Image src={customize} alt="" class="h-auto w-full" loading="lazy" width={888} height={203} />
@@ -35,6 +28,7 @@ import customize from "@assets/graphics/customize.webp";
 
   .left {
     @apply order-2 col-span-6 sm:order-1 sm:col-span-3 lg:col-span-4 xl:col-span-3 2xl:col-span-4;
+    mix-blend-mode: luminosity;
   }
 
   .right {
