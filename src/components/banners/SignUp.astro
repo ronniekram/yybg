@@ -11,9 +11,7 @@ import Newsletter from "@components/misc/Newsletter.astro";
 >
   <div class="wrapper base h-full sm:place-content-center">
     <div class="relative z-10 col-span-6 w-full sm:col-span-5 md:col-span-4 lg:col-span-5">
-      <h2 class="pb-2 text-xl font-semibold text-gray-900 md:text-2xl lg:text-3xl">
-        Early access beta waitlist
-      </h2>
+      <h2 class="heading">Early access beta waitlist</h2>
       <Newsletter />
     </div>
   </div>
@@ -28,5 +26,12 @@ import Newsletter from "@components/misc/Newsletter.astro";
     mask-mode: alpha;
     mask-image: url("/images/signup-mask.svg");
     mask-size: 100%;
+  }
+
+  .heading {
+    @apply pb-2 text-xl font-semibold text-gray-900 md:text-2xl lg:text-3xl xl:text-4xl;
+    /* text-shadow:
+      -0.06em 0 rgba(255, 0, 78, 0.85),
+      0.06em 0 rgba(43, 157, 135, 0.85); */
   }
 </style>
