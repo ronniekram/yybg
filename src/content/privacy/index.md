@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: Longjuice Squeeze website privacy policy
-lastUpdated: "2024-02-10"
+lastUpdated: "2024-10-02"
 
 policy:
   - heading: General
