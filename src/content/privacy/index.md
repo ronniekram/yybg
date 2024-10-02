@@ -1,19 +1,24 @@
 ---
 title: Privacy Policy
-description: Yum Yum Bloodgun website privacy policy
-lastUpdated: "2023-04-08"
+description: Longjuice Squeeze website privacy policy
+lastUpdated: "2024-02-10"
 
 policy:
   - heading: General
     body: |
-      <p>Goblin Delight, LLC, a Pennsylvania Limited Liability Company, builds commercial games such a CHORIZO and Yum Yum Bloodgun. These SERVICES are provided by and are intended for use as is.</p>
-      <p>This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
-      <p>If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+      <p>Goblin Delight, LLC, a Pennsylvania Limited Liability Company, builds commercial games such as CHORIZO and Longjuice Squeeze. These SERVICES are provided by and are intended for use as is.</p>
+      <p>This page is used to inform visitors regarding our policies regarding the collection, use, and disclosure of Personal Information if anyone decides to use our Service.</p>
+      <p>If you choose to use our Service, then you agree to the collection and use of information concerning this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
   - heading: Information Collection and Use
     body: |
-      <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to email address and, separately, we may generate a unique ID for analytics purposes. The information that we request will be retained by us and used as described in this privacy policy.</p>
-      <p>Our games use third party services that may collect information used to identify you. Link to privacy policy of third party service providers used by our games:</p>
-      <p><a class="link font-medium underline underline-offset-2" href="https://gameanalytics.com/privacy/" target="_blank" rel="noreferrer">Game Analytics</a></p>
+      <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to email address, and, separately, we may generate a unique ID for analytics purposes. The information gathered is used to identify bugs and improve gameplay and the general user experience. The information that we request will be retained by us and used as described in this privacy policy.</p>
+      <p>Our games use third-party services that may collect information used to identify you. Links to the privacy policy of third-party service providers used by our games:</p>
+      <ul class="list-disc list-outside pl-4">
+        <li><a class="link font-medium underline underline-offset-2" href="https://www.epicgames.com/site/en-US/privacypolicy/" target="_blank" rel="noreferrer">Epic Games Privacy Policy</a></li>
+        <li><a class="link font-medium underline underline-offset-2" href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noreferrer">Valve/Steam Privacy Policy</a></li>
+        <li>If you signed up for our mailing list, your information is processed by Mailchimp, and we will use the email address provided to contact you with updates about Longjuice Squeeze or other products created by Goblin Delight. (<a href="https://www.intuit.com/privacy/statement/" target="_blank" class="link font-medium underline underline-offset-2">Intuit Privacy Statement</a>)</li>
+      </ul>
+# <li><a href="" target="_blank" class="link font-medium underline underline-offset-2"></a></li>
   - heading: Log Data
     body: |
       <p>We want to inform you that whenever you use our Services, in a case of an error in the game we collect data and information (through third party products) on your device called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the game when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>

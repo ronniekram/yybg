@@ -20,7 +20,7 @@ factSheet:
 description:
   heading: Description
   body: |
-    <p>Shoot, parry, and slash your way to self-awareness in the alchemy-infused dystopia of Yum Yum Bloodgun, a 2D fighting game with deckbuilding mechanics and wild art — featuring high-stakes duels and highly customizable fighters.</p>
+    <p>Shoot, parry, and slash your way to self-awareness in the alchemy-infused dystopia of Longjuice Squeeze, a 2D fighting game with deckbuilding mechanics and wild art — featuring high-stakes duels and highly customizable fighters.</p>
 
 features:
   heading: Features
@@ -75,7 +75,7 @@ about:
     <p>Skate ipsum dolor sit amet, Natas Kaupas nose shoveit nose-bump boardslide camel back slappy. Pool full pipe launch ramp transition transfer feeble. Judo air opposite footed 540 spine mute-air downhill. Drop in betty risers soul skate durometer hang up. Coping vert deck cess slide nose slide hardware Love Bowl.</p>
 
 team:
-  heading: Yum Yum Bloodgun Team
+  heading: Longjuice Squeeze Team
   sections:
     - title: <a href="https://goblindelight.com/" class="link font-bold" target="_blank">Jer Boniface</a>
       body: <p>Engineering, Design & Direction</p>
