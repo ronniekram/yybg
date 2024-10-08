@@ -4,18 +4,19 @@ import steam from "@assets/graphics/logo/steam.svg";
 ---
 
 <section class="wrapper base place-items-center">
-  <div class="col-span-3 col-start-1 sm:col-span-5 lg:col-span-6 xl:col-span-6 2xl:col-span-7">
-    <h2 class="heading">Add Longjuice Squeeze to your Steam wishlist</h2>
-  </div>
-  <a
-    class="col-span-3 transition duration-300 ease-in-out hover:scale-105 lg:col-span-4 2xl:col-span-5"
-    href="#"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Longjuice Squeeze on the Steam store"
+  <div
+    class="col-span-3 w-full place-content-start sm:col-span-5 lg:col-span-6 xl:col-span-6 2xl:col-span-7"
   >
+    <a
+      href="https://store.steampowered.com/app/2414140?utm_source=longjuice&utm_campaign=splash&utm_medium=web"
+      class="heading"
+    >
+      Wishlist Longjuice Squeeze
+    </a>
+  </div>
+  <div class="col-span-3 transition duration-300 ease-in-out lg:col-span-4 2xl:col-span-5">
     <Image src={steam} alt="Steam's logo" loading="lazy" class="w-full" width={628} height={190} />
-  </a>
+  </div>
 </section>
 
 <style>
@@ -24,6 +25,6 @@ import steam from "@assets/graphics/logo/steam.svg";
   }
 
   .heading {
-    @apply w-full text-balance text-sm font-bold sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+    @apply w-full text-left text-xs font-bold text-blue-100 transition duration-300 ease-in-out hover:text-blue-200 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-6xl;
   }
 </style>
