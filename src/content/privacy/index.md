@@ -18,7 +18,7 @@ policy:
         <li><a class="link font-medium underline underline-offset-2" href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noreferrer">Valve/Steam Privacy Policy</a></li>
         <li>If you signed up for our mailing list, your information is processed by Mailchimp, and we will use the email address provided to contact you with updates about Longjuice Squeeze or other products created by Goblin Delight. (<a href="https://www.intuit.com/privacy/statement/" target="_blank" class="link font-medium underline underline-offset-2">Intuit Privacy Statement</a>)</li>
       </ul>
-# <li><a href="" target="_blank" class="link font-medium underline underline-offset-2"></a></li>
+  # <li><a href="" target="_blank" class="link font-medium underline underline-offset-2"></a></li>
   - heading: Log Data
     body: |
       <p>We want to inform you that whenever you use our Services, in a case of an error in the game we collect data and information (through third party products) on your device called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the game when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
